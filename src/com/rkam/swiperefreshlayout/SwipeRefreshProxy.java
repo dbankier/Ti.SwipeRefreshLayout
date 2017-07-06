@@ -59,6 +59,8 @@ public class SwipeRefreshProxy extends TiViewProxy implements Handler.Callback {
 	}
 	
 	protected void doSetRefreshing(boolean refreshing) {
-		this.swipeRefresh.setRefreshing(refreshing);
+    if (this.swipeRefresh != null) {
+      this.swipeRefresh.setRefreshing(refreshing);
+    }
 	}
 }
